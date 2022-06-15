@@ -1,0 +1,7 @@
+Use dialog for the easiest way to make a popup modal (https://www.youtube.com/watch?v=TAB_v6yBXIE)
+
+https://codepen.io/kevinpowell/pen/KKyOYvM
+https://github.com/Annie-Huang/popup-modals-from-dialog
+
+
+-------------------------------------------------------------------------------------------------
