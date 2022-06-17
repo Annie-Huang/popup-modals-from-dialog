@@ -44,3 +44,7 @@ h1 em {
   background: var(--cyan-9);
 }
 
+form {
+  display: grid;
+  gap: 1em;
+}
