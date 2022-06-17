@@ -6,6 +6,10 @@
   margin: 0 0 0.5rem 0;
 }
 
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 /* extra styling */
 body {
   --gray-2: #e9ecef;
