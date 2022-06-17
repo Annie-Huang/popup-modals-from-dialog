@@ -1,6 +1,9 @@
 Use dialog for the easiest way to make a popup modal (https://www.youtube.com/watch?v=TAB_v6yBXIE)
-
 https://codepen.io/kevinpowell/pen/KKyOYvM
+
+Animate from display none (https://www.youtube.com/watch?v=4prVdA7_6u0&t=289s)
+https://codepen.io/kevinpowell/pen/QWaBeGm
+
 https://github.com/Annie-Huang/popup-modals-from-dialog
 
 
