@@ -1,8 +1,4 @@
 .modal {
-  display: block;
-  pointer-events: none;
-  inset: 0;
-  animation: fade-out 500ms forwards;
   padding: 1em;
   max-width: 50ch;
   border: 0;
@@ -20,6 +16,13 @@
 
 .modal[open] {
   animation: fade-in 500ms forwards;
+}
+
+.modal[closing] {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards;
 }
 
 .modal[open]::backdrop {
