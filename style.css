@@ -15,7 +15,7 @@
 }
 
 .modal[open] {
-  animation: fade-in 500ms forwards;
+  animation: slide-up 1000ms forwards, fade-in 500ms forwards;
 }
 
 .modal[closing] {

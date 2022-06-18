@@ -21,7 +21,7 @@
 }
 
 .modal[open] {
-  animation: fade-in 500ms forwards; // forwards means stop at the end of the animation
+  animation: slide-up 1000ms forwards, fade-in 500ms forwards; // forwards means stop at the end of the animation
 }
 
 // our own custom property. this is different from 'open' which is offically come with dialog in html
