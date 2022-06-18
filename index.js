@@ -12,6 +12,15 @@ openModal.addEventListener('click', () => {
   modal.showModal();
 });
 
+modal.addEventListener('click', (e) => {
+  // console.log(e.target);
+  // Add a event listen to modal and detect if the user is click on P, H2, LABEL, INPUT OR DIALOG,
+  // Notice clicking the white space next to the button is also clicking onto the DIALOG
+  console.log(e.target.nodeName);
+
+  // modal.close();
+});
+
 closeModal.addEventListener('click', () => {
   // So when it is clicked it will initially becomes <dialog class="modal" id="modal" open="" closing="">...</dialog>
   modal.setAttribute('closing', ''); // It is the same as modal.setAttribute('closing', 'true');
