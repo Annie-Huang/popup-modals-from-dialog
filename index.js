@@ -13,5 +13,8 @@ openModal.addEventListener('click', () => {
 });
 
 closeModal.addEventListener('click', () => {
-  modal.close();
+  // So when it is clicked it will initially becomes <dialog class="modal" id="modal" open="" closing="">...</dialog>
+  modal.setAttribute('closing', ''); // It is the same as modal.setAttribute('closing', 'true');
+
+  // modal.close();
 });
