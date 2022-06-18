@@ -1,6 +1,12 @@
 .modal {
-  //display: block;
-  //inset: 0;
+  display: block;
+  // prevent the pointer event on the button on the modal and text in the modal being able to high lined
+  // and keyboard still able to navigate to it through tab
+  pointer-events: none;
+  inset: 0;
+
+  // This will make closing of modal work but on launch it will make modal appear then disappear as well
+  animation: fade-out 500ms forwards;
 
   padding: 1em;
   max-width: 50ch;
@@ -15,8 +21,8 @@
 }
 
 .modal::backdrop {
-  //background: rgb(0 0 0 / 0.4);
-  background: black;
+  background: rgb(0 0 0 / 0.4);
+  //background: black;
   opacity: 0;
 
   // transition on opacity does not work.
@@ -31,7 +37,7 @@
   // transition on opacity does not work.
   //opacity: 1;
 
-  // animate on opacity does work.
+  // animate on opacity does work for all browser except for firefox
   animation: fade-in 500ms forwards;
 }
 
@@ -49,7 +55,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
 

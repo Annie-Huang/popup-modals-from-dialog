@@ -1,4 +1,8 @@
 .modal {
+  display: block;
+  pointer-events: none;
+  inset: 0;
+  animation: fade-out 500ms forwards;
   padding: 1em;
   max-width: 50ch;
   border: 0;
@@ -10,7 +14,7 @@
 }
 
 .modal::backdrop {
-  background: black;
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
 }
 
@@ -35,7 +39,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
 @keyframes slide-up {
