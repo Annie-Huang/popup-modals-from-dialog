@@ -16,3 +16,6 @@ When dialog is not open, the style is:
 dialog:not([open]) {
     display: none;
 }
+
+transition on opacity does not work.
+animate on opacity does work.

@@ -18,6 +18,10 @@
   animation: fade-in 500ms forwards;
 }
 
+.modal[open]::backdrop {
+  animation: fade-in 500ms forwards;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;

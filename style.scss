@@ -19,7 +19,7 @@
   background: black;
   opacity: 0;
 
-  // transition on opacity does not work
+  // transition on opacity does not work.
   //transition: opacity 500ms;
 }
 
@@ -28,8 +28,11 @@
 }
 
 .modal[open]::backdrop {
-  // transition on opacity does not work
+  // transition on opacity does not work.
   //opacity: 1;
+
+  // animate on opacity does work.
+  animation: fade-in 500ms forwards;
 }
 
 @keyframes fade-in {
