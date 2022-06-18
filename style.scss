@@ -15,13 +15,22 @@
 }
 
 .modal::backdrop {
-  background: rgb(0 0 0 / 0.4);
+  //background: rgb(0 0 0 / 0.4);
+  background: black;
+  opacity: 0;
+
+  // transition on opacity does not work
+  //transition: opacity 500ms;
 }
 
 .modal[open] {
   animation: fade-in 500ms forwards; // forwards means stop at the end of the animation
 }
 
+.modal[open]::backdrop {
+  // transition on opacity does not work
+  //opacity: 1;
+}
 
 @keyframes fade-in {
   0% {
