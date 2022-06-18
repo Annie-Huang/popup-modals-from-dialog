@@ -11,3 +11,8 @@ https://github.com/Annie-Huang/popup-modals-from-dialog
 
 <dialog class="modal" id="modal"></dialog>          <<< dialog not showing
 <dialog open class="modal" id="modal"></dialog>     <<< dialog shows
+
+When dialog is not open, the style is:
+dialog:not([open]) {
+    display: none;
+}
