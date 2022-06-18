@@ -1,14 +1,21 @@
 .modal {
-  padding: 1em;
+  //padding: 1em;
+  // Need to shift the padding the .modal-content level so we can be sure clicking the edge of the modal is not clicking on the DIALOG
+  padding: 0;
   max-width: 50ch;
+
   // remove the default <dialog> styling
   border: 0;
   box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
   border-radius: 0.25rem;
 
-  & > * {
-    margin: 0 0 0.5rem 0;
-  }
+  //& > * {
+  //  margin: 0 0 0.5rem 0;
+  //}
+}
+
+.modal-content {
+  padding: 1rem;
 }
 
 .modal::backdrop {
