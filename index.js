@@ -16,5 +16,9 @@ closeModal.addEventListener('click', () => {
   // So when it is clicked it will initially becomes <dialog class="modal" id="modal" open="" closing="">...</dialog>
   modal.setAttribute('closing', ''); // It is the same as modal.setAttribute('closing', 'true');
 
-  // modal.close();
+  // When animation ends (.modal[closing]'s animation), we will remove the 'closing' and 'open' attributes
+  modal.addEventListener('animationend', () => {
+    modal.removeAttribute('closing');
+    modal.close();
+  });
 });
