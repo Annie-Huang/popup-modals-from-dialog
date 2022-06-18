@@ -17,8 +17,15 @@ closeModal.addEventListener('click', () => {
   modal.setAttribute('closing', ''); // It is the same as modal.setAttribute('closing', 'true');
 
   // When animation ends (.modal[closing]'s animation), we will remove the 'closing' and 'open' attributes
-  modal.addEventListener('animationend', () => {
-    modal.removeAttribute('closing');
-    modal.close();
-  });
+  // Need to do only once, otherwise, any other animation finished will trigger modal.close() meaning the modal can never to open again.
+  modal.addEventListener(
+    'animationend',
+    () => {
+      modal.removeAttribute('closing');
+      modal.close();
+    },
+    // I am actually surprise that the animationend once is actually apply to .modal[closing] and .modal[open]::backdrop.
+    // I thought it would just apply to the first one, whichever finished first...
+    { once: true }
+  );
 });
