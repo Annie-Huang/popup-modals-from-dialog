@@ -6,7 +6,11 @@
 
   // remove the default <dialog> styling
   border: 0;
-  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+
+  // .modal[open]::backdrop animation does not work in firefox, so use boxshadow in .modal instead
+  // But it means you cannot run different timing in the animation.
+  //box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3), 0 0 0 100vw rgb(0 0 0 / 0.5);
   border-radius: 0.25rem;
 
   //& > * {
@@ -31,6 +35,9 @@
   animation: slide-up 1000ms forwards, fade-in 500ms forwards; // forwards means stop at the end of the animation
 }
 
+/*
+// .modal[open]::backdrop animation does not work in firefox, so use boxshadow in .modal instead
+// But it means you cannot run different timing in the animation.
 .modal[open]::backdrop {
   // transition on opacity does not work.
   //opacity: 1;
@@ -38,6 +45,7 @@
   // animate on opacity does work for all browser except for firefox
   animation: fade-in 500ms forwards;
 }
+*/
 
 // our own custom property. this is different from 'open' which is offically come with dialog in html
 .modal[closing] {
@@ -51,12 +59,14 @@
   animation: fade-out 500ms forwards;
 }
 
+/*
+// since .modal[open]::backdrop commented out, so use boxshadow in .modal instead
 .modal[closing]::backdrop {
   // the timing value has to be the same as the .modal[closing] animation value, otherwise you will see the jumping effect.
   // reason is explained in the index.js
   //animation: fade-out 2000ms forwards;
   animation: fade-out 500ms forwards;
-}
+}*/
 
 @keyframes fade-in {
   0% {
