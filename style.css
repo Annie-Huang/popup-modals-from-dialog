@@ -18,15 +18,15 @@
   animation: slide-up 1000ms forwards, fade-in 500ms forwards;
 }
 
+.modal[open]::backdrop {
+  animation: fade-in 500ms forwards;
+}
+
 .modal[closing] {
   display: block;
   pointer-events: none;
   inset: 0;
   animation: fade-out 500ms forwards;
-}
-
-.modal[open]::backdrop {
-  animation: fade-in 500ms forwards;
 }
 
 .modal[closing]::backdrop {

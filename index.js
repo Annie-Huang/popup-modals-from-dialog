@@ -24,8 +24,11 @@ closeModal.addEventListener('click', () => {
       modal.removeAttribute('closing');
       modal.close();
     },
-    // I am actually surprise that the animationend once is actually apply to .modal[closing] and .modal[open]::backdrop.
-    // I thought it would just apply to the first one, whichever finished first...
+    // There are two animations: .modal[closing] and .modal[open]::backdrop.
+    // The following will only apply to the first one, whichever finished first...
+    // So if you set .modal[closing] to 500ms and .modal[open]::backdrop to 2000ms,
+    // you will see after 500ms, the modal backdrop suddenly disappear because the 'closing' attribute is removed and opacity straight away go away as its original value is
+    // .modal::backdrop {opacity: 0;}
     { once: true }
   );
 });

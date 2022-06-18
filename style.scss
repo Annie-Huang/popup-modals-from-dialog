@@ -24,6 +24,14 @@
   animation: slide-up 1000ms forwards, fade-in 500ms forwards; // forwards means stop at the end of the animation
 }
 
+.modal[open]::backdrop {
+  // transition on opacity does not work.
+  //opacity: 1;
+
+  // animate on opacity does work for all browser except for firefox
+  animation: fade-in 500ms forwards;
+}
+
 // our own custom property. this is different from 'open' which is offically come with dialog in html
 .modal[closing] {
   display: block;
@@ -36,15 +44,10 @@
   animation: fade-out 500ms forwards;
 }
 
-.modal[open]::backdrop {
-  // transition on opacity does not work.
-  //opacity: 1;
-
-  // animate on opacity does work for all browser except for firefox
-  animation: fade-in 500ms forwards;
-}
-
 .modal[closing]::backdrop {
+  // the timing value has to be the same as the .modal[closing] animation value, otherwise you will see the jumping effect.
+  // reason is explained in the index.js
+  //animation: fade-out 2000ms forwards;
   animation: fade-out 500ms forwards;
 }
 
