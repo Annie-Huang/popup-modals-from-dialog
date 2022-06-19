@@ -9,8 +9,10 @@
 
   // .modal[open]::backdrop animation does not work in firefox, so use boxshadow in .modal instead
   // But it means you cannot run different timing in the animation.
+  // vmax meaning choose the bigger number between view point height and view point width
   //box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
-  box-shadow: 0 0 1em rgb(0 0 0 / 0.3), 0 0 0 100vw rgb(0 0 0 / 0.5);
+  //box-shadow: 0 0 1em rgb(0 0 0 / 0.3), 0 0 0 100vw rgb(0 0 0 / 0.5);
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3), 0 0 0 100vmax rgb(0 0 0 / 0.5);
   border-radius: 0.25rem;
 
   //& > * {

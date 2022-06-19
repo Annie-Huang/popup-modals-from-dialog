@@ -19,3 +19,6 @@ dialog:not([open]) {
 
 transition on opacity does not work.
 animate on opacity does work.
+
+Use box-shadow to do the backdrop (the second value):
+box-shadow: 0 0 1em rgb(0 0 0 / 0.3), 0 0 0 100vmax rgb(0 0 0 / 0.5);
